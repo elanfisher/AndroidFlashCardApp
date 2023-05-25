@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LearnCards">
+
+    <!-- A centered button with id card and height 200sp -->
+    <Button
+        android:id="@+id/card"
+        android:layout_width="300sp"
+        android:layout_height="200sp"
+        android:layout_centerInParent="true"
+        app:backgroundTint="@null"
+        android:background="#C8C8C8"
+        android:textColor="#272727"
+        android:text="There are no cards yet."
+        android:textSize="30sp"
+        android:onClick="flip"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        />
+
+    <!-- TextView positioned relative to the top left of the button with id card with id current_card-->
+    <TextView
+        android:id="@+id/current_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/card"
+        android:layout_above="@id/card"
+        android:text="-inf to -inf"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <!-- Count down timer -->
+    <TextView
+        android:id="@+id/countdown_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/card"
+        android:layout_above="@id/card"
+        android:text="00:00"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <!-- Create a button that is below card and aligned left to it-->
+    <Button
+        android:id="@+id/correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card"
+        android:layout_alignLeft="@id/card"
+        android:text="Correct"
+        app:backgroundTint="@null"
+        android:background="#7ED87E"
+        android:onClick="correctCard"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <!-- Create a button that is below card and aligned right to it with a red background-->
+    <Button
+        android:id="@+id/incorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card"
+        android:layout_alignRight="@id/card"
+        android:text="Incorrect"
+        app:backgroundTint="@null"
+        android:background="#E88E8E"
+        android:onClick="incorrectCard"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+    
+    <!-- Create a progress bar from with id progress with a blue color -->
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/correct"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:progress="0"
+        android:progressTint="#7ED87E"
+        android:progressBackgroundTint="#E88E8E"
+        />
+
+    <!-- TextView with text 1 to the top left of the progress bar and marginTop and marginBottom of 10 -->
+    <TextView
+        android:id="@+id/progress_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/progress"
+        android:layout_above="@id/progress"
+        android:text="1"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+    
+    <!-- TextView with text 100 to the top right of the progress bar and marginTop and marginBottom of 10 -->
+    <TextView
+        android:id="@+id/progress_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/progress"
+        android:layout_above="@id/progress"
+        android:text="100"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+</RelativeLayout>

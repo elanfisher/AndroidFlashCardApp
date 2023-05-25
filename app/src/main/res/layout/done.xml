@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DoneActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <!-- Centered textview with id msg -->
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50sp"
+            android:paddingTop="50sp"
+            android:text="Add new flashcards or study the ones you missed."
+            android:textSize="30sp" />
+
+        <!-- Centered button with id and onClick method restart and height 100sp below msg-->
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="150sp"
+            android:layout_height="100sp"
+            android:layout_below="@id/msg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100sp"
+            android:onClick="restart"
+            android:text="Restart" />
+
+        <!-- Centered button with id and onClick method edit and height 100sp below restart -->
+        <Button
+            android:id="@+id/new_cards"
+            android:layout_width="150sp"
+            android:layout_height="100sp"
+            android:layout_below="@id/restart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100sp"
+            android:onClick="addCards"
+            android:text="Add New Cards" />
+
+    </LinearLayout>
+
+    <!-- Add our ad ;) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#FDDD"
+        android:id="@+id/ad_view"
+        >
+    </LinearLayout>
+</LinearLayout>

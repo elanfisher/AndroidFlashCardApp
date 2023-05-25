@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="my_root"
+        path="/" />
+
+    <external-path
+        name="my_debnug_images"
+        path="/storage/emulated/0/Android/data/com.example.usingcamera2/files/Pictures"/>
+
+    <external-path
+        name="my_images"
+        path="Android/app/data/com.example.usingcamera2/files/Pictures"/>
+</paths>

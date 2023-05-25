@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    >
+
+    <!-- EditText with id front with size 200 centered -->
+    <EditText
+        android:id="@+id/question"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+        android:hint="Type Your Question Here"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <!-- EditText with size 200 centered align_below front with padding 100sp -->
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+        android:hint="Type Your Answer Here"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <!-- Button with id add to the top left of front -->
+    <Button
+        android:id="@+id/addCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50sp"
+        android:onClick="addNewCard"
+        android:text="Add Card" />
+
+    <!-- Button with id done to the top right of front -->
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50sp"
+        android:onClick="doneAdding"
+        android:text="Done Adding" />
+
+    <!-- TextView with id number below back -->
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answer"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+        android:text="0 Cards In This Deck"
+        android:textSize="30sp" />
+    
+
+</RelativeLayout>
